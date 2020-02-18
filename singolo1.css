@@ -9,8 +9,111 @@ a {
   outline: none
 }
 
-body {
-  /* fullscreen background */
-  height: 100vh;
-  background-size: cover;
+.main {
 }
+.header {
+
+		// .header__title
+
+		&__title {
+		}
+
+		// .header__list
+
+		&__list {
+		}
+
+		// .header__list_item
+
+		&__list_item {
+		}
+
+		// .header__list_link
+
+		&__list_link {
+		}
+}
+.red_text {
+}
+.slider {
+
+		// .slider__slide
+
+		&__slide {
+		}
+
+		// .slider__slide_vertical_mobile
+
+		&__slide_vertical_mobile {
+		}
+
+		// .slider__slide_horizontal_mobile
+
+		&__slide_horizontal_mobile {
+		}
+}
+.slide {
+
+		// .slide__vertical_mobile_body
+
+		&__vertical_mobile_body {
+		}
+
+		// .slide__vertical_mobile_content
+
+		&__vertical_mobile_content {
+		}
+
+		// .slide__horizontal_mobile_body
+
+		&__horizontal_mobile_body {
+		}
+
+		// .slide__horizontal_mobile_content
+
+		&__horizontal_mobile_content {
+		}
+}
+.services {
+
+		// .services__description
+
+		&__description {
+		}
+
+		// .services__description_header
+
+		&__description_header {
+		}
+
+		// .services__description_text
+
+		&__description_text {
+		}
+
+		// .services__list
+
+		&__list {
+		}
+
+		// .services__item_icon
+
+		&__item_icon {
+		}
+
+		// .services__item_text_block
+
+		&__item_text_block {
+		}
+
+		// .services__item_header
+
+		&__item_header {
+		}
+
+		// .services__item_text
+
+		&__item_text {
+		}
+}
+
