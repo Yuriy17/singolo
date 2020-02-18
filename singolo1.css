@@ -3,117 +3,110 @@ html {
   overflow-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));
   font-size: 62.5%;
+  font-family: "Lato", "Times New Roman", Times, serif;
 }
 
 a {
-  outline: none
+  outline: none;
+  text-decoration: none;
 }
 
 .main {
+  width: 1020px;
+  margin: 0 auto;
 }
+
 .header {
+	height: 8.9rem;
+	display: flex;
+	color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+	background-color: #2d303a;
+	border-bottom: 0.6rem solid #323746;
+}
 
-		// .header__title
+.header__title {
+  font-size: 2.5rem;
+  line-height: 0.6rem;
+  font-family: "Lato";
+  font-weight: 700;
+}
 
-		&__title {
-		}
+.header__list {
+	
+}
 
-		// .header__list
-
-		&__list {
-		}
-
-		// .header__list_item
-
-		&__list_item {
-		}
-
-		// .header__list_link
-
-		&__list_link {
-		}
+.header__list_item {
+  list-style: none; 
+  display: inline;
+  font-size: 1.2rem;
+}
+.header__list_item:before {
+  content: " \00b7";
+}
+.header__list_item:first-child:before {
+  content: none;
+}
+.header__list_link {
+  color: #ffffff;
+}
+.header__list_link {
 }
 .red_text {
+  color: #f06c64;
 }
+
 .slider {
-
-		// .slider__slide
-
-		&__slide {
-		}
-
-		// .slider__slide_vertical_mobile
-
-		&__slide_vertical_mobile {
-		}
-
-		// .slider__slide_horizontal_mobile
-
-		&__slide_horizontal_mobile {
-		}
 }
+
+.slider__slide {
+}
+
+.slider__slide_vertical_mobile {
+}
+
+.slider__slide_horizontal_mobile {
+}
+
 .slide {
-
-		// .slide__vertical_mobile_body
-
-		&__vertical_mobile_body {
-		}
-
-		// .slide__vertical_mobile_content
-
-		&__vertical_mobile_content {
-		}
-
-		// .slide__horizontal_mobile_body
-
-		&__horizontal_mobile_body {
-		}
-
-		// .slide__horizontal_mobile_content
-
-		&__horizontal_mobile_content {
-		}
 }
+
+.slide__vertical_mobile_body {
+}
+
+.slide__vertical_mobile_content {
+}
+
+.slide__horizontal_mobile_body {
+}
+
+.slide__horizontal_mobile_content {
+}
+
 .services {
-
-		// .services__description
-
-		&__description {
-		}
-
-		// .services__description_header
-
-		&__description_header {
-		}
-
-		// .services__description_text
-
-		&__description_text {
-		}
-
-		// .services__list
-
-		&__list {
-		}
-
-		// .services__item_icon
-
-		&__item_icon {
-		}
-
-		// .services__item_text_block
-
-		&__item_text_block {
-		}
-
-		// .services__item_header
-
-		&__item_header {
-		}
-
-		// .services__item_text
-
-		&__item_text {
-		}
 }
 
+.services__description {
+}
+
+.services__description_header {
+}
+
+.services__description_text {
+}
+
+.services__list {
+}
+
+.services__item_icon {
+}
+
+.services__item_text_block {
+}
+
+.services__item_header {
+}
+
+.services__item_text {
+}
