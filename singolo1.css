@@ -100,6 +100,7 @@ a {
 }
 
 .services__item_icon {
+  width:60px;
 }
 
 .services__item_text_block {
@@ -110,3 +111,6 @@ a {
 
 .services__item_text {
 }
+tspan { white-space:pre }
+.shp0 { fill: #666d89 } 
+.shp1 { fill: none;stroke: #666d89;stroke-width: 2 } 
