@@ -89,6 +89,27 @@ h4 {
 .get-quote__form {
   max-width: 618px;
 }
+.get-quote__form input, .get-quote__form textarea {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+  border: none;
+  background-color: #d6564f;
+  border-radius: 5px;
+  width: 100%;
+}
+.get-quote__form input::placeholder, .get-quote__form textarea::placeholder {
+  color: #f48c8f;
+}
+.get-quote__form input:focus, .get-quote__form textarea:focus {
+  outline: none;
+  border: 1px solid #f0c2c1;
+}
+.get-quote__form textarea {
+  resize: none;
+  height: 200px;
+}
 .get-quote__content {
   max-width: 300px;
 }
