@@ -1,0 +1,96 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", Verdana, sans-serif;
+}
+
+h2 {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 4.8rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.8rem;
+  color: #666d89;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1020px;
+  margin: auto;
+  padding: 0 4rem;
+}
+
+.layout-2-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.layout-2-columns * > {
+  flex-basis: 45%;
+}
+
+.links-icons {
+  display: flex;
+}
+
+.ico {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #666d89;
+}
+
+.ico-object {
+  width: 16px;
+  height: 16px;
+}
+
+.ico-svg:hover .shp0 {
+  fill: #000000;
+}
+
+.get-quote__wrapper {
+  background-color: #f06c64;
+}
+.get-quote__title {
+  color: #f0d8d9;
+  display: inline-block;
+  margin-top: 53px;
+  margin-bottom: 12px;
+  letter-spacing: -0.02rem;
+}
+.get-quote__description {
+  color: #f0c2c1;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 3rem;
+  letter-spacing: -0.004rem;
+}
+.get-quote__form-block {
+  display: flex;
+  justify-content: space-between;
+}
+.get-quote__form {
+  max-width: 618px;
+}
+.get-quote__content {
+  max-width: 300px;
+}
+
+/*# sourceMappingURL=singolo3.css.map */
