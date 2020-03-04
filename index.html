@@ -269,9 +269,9 @@
                 <div class="get-quote__form-block">
                     <div class="get-quote__form">
                         <form action method="POST">
-                            <input placeholder="Name (Required)" class="get-quote__input" type="text" />
-                            <input placeholder="Email (Required)" class="get-quote__input" type="email" />
-                            <input placeholder="Subject" class="get-quote__input" type="text" />
+                            <input required placeholder="Name (Required)" class="get-quote__input" type="text" />
+                            <input required placeholder="Email (Required)" class="get-quote__input" type="email" />
+                            <input required placeholder="Subject" class="get-quote__input" type="text" />
                             <textarea placeholder="Describe your project in detail..." class="get-quote__textarea"
                                 cols="30" rows="10"></textarea>
                             <div class="qet-quote__button-block">
@@ -290,15 +290,15 @@
                         <ul class="contacts">
                             <li class="contacts__item">
                                 <span class="contacts__icon contacts__icon-locate"></span>
-                                <p class="contacts__description">Elm St. 14/05 Lost City</p>
+                                <a href="#" class="contacts__description">Elm St. 14/05 Lost City</a>
                             </li>
                             <li class="contacts__item">
                                 <span class="contacts__icon contacts__icon-telephone"></span>
-                                <p class="contacts__description">03528 331 86 35</p>
+                                <a href="tel:03528 331 86 35" class="contacts__description">03528 331 86 35</a>
                             </li>
                             <li class="contacts__item">
                                 <span class="contacts__icon contacts__icon-mail"></span>
-                                <p class="contacts__description">info@singolo.com</p>
+                                <a href = "mailto: info@singolo.com" class="contacts__description">info@singolo.com</a>
                             </li>
                         </ul>
                     </div>
