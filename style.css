@@ -585,13 +585,13 @@ a {
   align-items: center;
 }
 .contacts__item:hover .contacts__icon-locate {
-  background-image: url(../../../assets/images/singolo3/icons/locate-black.svg);
+  background-image: url(./assets/images/singolo3/icons/locate-black.svg);
 }
 .contacts__item:hover .contacts__icon-telephone {
-  background-image: url(../../../assets/images/singolo3/icons/telephone-black.svg);
+  background-image: url(./assets/images/singolo3/icons/telephone-black.svg);
 }
 .contacts__item:hover .contacts__icon-mail {
-  background-image: url(../../../assets/images/singolo3/icons/mail-black.svg);
+  background-image: url(./assets/images/singolo3/icons/mail-black.svg);
 }
 .contacts__description {
   font-size: 1.2rem;
@@ -608,21 +608,21 @@ a {
   background-repeat: no-repeat;
 }
 .contacts__icon-locate {
-  background-image: url(../../../assets/images/singolo3/icons/locate-white.svg);
+  background-image: url(./assets/images/singolo3/icons/locate-white.svg);
   height: 12px;
   width: 7px;
   margin-left: 3px;
   margin-right: 14px;
 }
 .contacts__icon-telephone {
-  background-image: url(../../../assets/images/singolo3/icons/telephone-white.svg);
+  background-image: url(./assets/images/singolo3/icons/telephone-white.svg);
   height: 12px;
   width: 11px;
   margin-left: 1px;
   margin-right: 11px;
 }
 .contacts__icon-mail {
-  background-image: url(../../../assets/images/singolo3/icons/mail-white.svg);
+  background-image: url(./assets/images/singolo3/icons/mail-white.svg);
   height: 14px;
   width: 14px;
   margin-top: 8px;
