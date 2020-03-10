@@ -364,9 +364,7 @@ a {
   margin-bottom: 67px;
 }
 
-.portfolio__image:nth-child(n+13) {
-  display: none;
-}
+
 
 .portfolio__wrapper {
   background: #2d303a;
@@ -402,7 +400,9 @@ a {
 .portfolio__image {
   cursor: pointer;
 }
-
+.portfolio__image:nth-child(n+13) {
+  display: none;
+}
 .tags {
   display: flex;
 }
