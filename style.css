@@ -291,6 +291,7 @@ a {
   display: flex;
   flex-direction: column;
   max-width: 240px;
+  overflow: hidden;
   padding-left: 2rem;
 }
 
