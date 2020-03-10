@@ -348,6 +348,9 @@ a {
 .employee__title {
   margin-top: 13px;
   margin-bottom: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .employee__description {
