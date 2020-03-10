@@ -364,7 +364,7 @@ a {
   margin-bottom: 67px;
 }
 
-.portfolio__images:nth-child(n+13) {
+.portfolio__image:nth-child(n+13) {
   display: none;
 }
 
