@@ -19,13 +19,12 @@
                     <span class="header__title-star">*</span>
                 </h1>
             </div>
-            <ul class="header__list">
-                <li class="header__list-item"><a class="header__list-link header__list-link-selected" href="#">HOME</a>
-                </li>
-                <li class="header__list-item"><a class="header__list-link" href="#">SERVICES</a></li>
-                <li class="header__list-item"><a class="header__list-link" href="#">PORTFOLIO</a></li>
-                <li class="header__list-item"><a class="header__list-link" href="#">ABOUT</a></li>
-                <li class="header__list-item"><a class="header__list-link" href="#">CONTACT</a></li>
+            <ul id="menu" class="header__list">
+                <li class="header__list-item"><a class="header__list-link header__list-link-selected" href="#">HOME</a></li>
+                <li class="header__list-item"><a class="header__list-link" href="#services">SERVICES</a></li>
+                <li class="header__list-item"><a class="header__list-link" href="#portfolio">PORTFOLIO</a></li>
+                <li class="header__list-item"><a class="header__list-link" href="#about">ABOUT</a></li>
+                <li class="header__list-item"><a class="header__list-link" href="#contact">CONTACT</a></li>
             </ul>
         </div>
     </header>
@@ -48,7 +47,7 @@
                 <img class="slider__right-arrow" src="assets/images/right-arrow.png" alt="right arrow">
             </div>
         </section>
-        <section class="services">
+        <section id="services" class="services">
             <div class="wrapper services__wrapper">
                 <div class="services__description">
                     <div class="services__description-header">Our Services</div>
@@ -134,7 +133,7 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <section id="portfolio" class="portfolio">
             <div class="wrapper portfolio__wrapper">
                 <h2 class="portfolio__title">Portfolio</h2>
                 <p class="portfolio__description">
@@ -174,7 +173,7 @@
                 </div>
             </div>
         </section>
-        <section class="about-us">
+        <section id="about" class="about-us">
             <div class="wrapper about-us__wrapper">
                 <h2 class="about-us__title">About Us</h2>
                 <p class="about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -259,7 +258,7 @@
                 </div>
             </div>
         </section>
-        <section class="get-quote">
+        <section id="contact" class="get-quote">
             <div class="wrapper get-quote__wrapper">
                 <h2 class="get-quote__title">Get a Quote</h2>
                 <p class="get-quote__description">
@@ -393,6 +392,7 @@
 
         </defs>
     </svg>
+    <script src="script.js"></script>
 </body>
 
 </html>
