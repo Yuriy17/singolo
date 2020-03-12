@@ -1,30 +1,27 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // menu
-  const MENU = document.getElementById("menu");
+const addActiveLinkToMenu = () =>{
+    const MENU = document.getElementById("menu");
 
-  MENU.addEventListener("click", (event) => {
-    MENU.querySelectorAll('.header__list-link').forEach((element)=>{
-      element.classList.remove('header__list-link-selected');   
+    MENU.addEventListener("click", (event) => {
+      MENU.querySelectorAll('.header__list-link').forEach((element)=>{
+        element.classList.remove('header__list-link-selected');   
+      });
+      event.target.classList.add('header__list-link-selected')
     });
-    event.target.classList.add('header__list-link-selected')
-  });
+}
 
-
-
-
-  // CHANGE ONLY THIS
+const addSlider = () =>{
   const SLIDETIME = 500; //ms
   // --------------------------
-
-  const backButton = document.querySelector('.slider__left-arrow');
-  const forwardButton = document.querySelector('.slider__right-arrow');
+  const SLIDER = document.getElementById('slider');
+  const backButton = SLIDER.querySelector('.slider__left-arrow');
+  const forwardButton = SLIDER.querySelector('.slider__right-arrow');
   // Select all slides and convert node to array for easy handling
   // const allSlides = Array.from(document.querySelectorAll('.wbn-slide'));
-  const allSlides = [...document.querySelectorAll('.slider__slide')];
+  const allSlides = [...SLIDER.querySelectorAll('.slider__slide')];
   let clickable = true;
   let active = null;
   let newActive = null;
-
+  
   function initSlider() {
     // Set the CSS transition on the slides to the value we specified in SLIDETIME above
     allSlides.forEach(slide =>
@@ -39,22 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
   function changeSlide(forward) {
     if (clickable) {
       clickable = false;
-      active = document.querySelector('.active');
+      active = SLIDER.querySelector('.active');
       const activeSlideIndex = allSlides.indexOf(active);
 
       if (forward) {
-        console.log('activeSlideIndex: ', activeSlideIndex);
-        console.log('allSlides.length: ', allSlides.length);
-        console.log('new slide: ', (activeSlideIndex + 1) % allSlides.length);
-
         newActive = allSlides[(activeSlideIndex + 1) % allSlides.length];
         active.classList.add('slideOutLeft');
         newActive.classList.add('slideInRight', 'active');
       } else {
-        console.log('activeSlideIndex: ', activeSlideIndex);
-        console.log('allSlides.length: ', allSlides.length);
-        console.log('new slide: ', (activeSlideIndex - 1 + allSlides.length) % allSlides.length);
-
         newActive =
           allSlides[
             (activeSlideIndex - 1 + allSlides.length) % allSlides.length
@@ -87,4 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Init the slider
   initSlider();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Header menu
+  addActiveLinkToMenu();
+
+  // Slider
+  addSlider();
+  
 });

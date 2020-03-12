@@ -149,7 +149,6 @@ a {
 .slider__wrapper {
   display: flex;
   justify-content: center;
-  background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
   position: relative;
   overflow: hidden;
@@ -190,11 +189,14 @@ a {
   z-index: 500;
   display: flex;
   justify-content: space-between;
-  min-width: 800px;
+  width: 100%;
+}
+.slider__slide:nth-child(1) {
+  background-color: #f06c64;
+  padding: 0 110px;
 }
 .slider__slide img {
   object-fit: cover;
-  width: 100%;
   pointer-events: none;
 }
 
