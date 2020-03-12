@@ -127,7 +127,7 @@ a {
   flex-basis: 21%;
 }
 .layout-4-columns > * {
-  margin-bottom: 20px;
+  margin-bottom: 9px;
 }
 
 .footer__wrapper {
@@ -449,11 +449,19 @@ a {
 }
 
 .portfolio__images {
-  padding-bottom: 46px;
+  padding-bottom: 54px;
+  margin-left: -5px;
+  margin-top: -5px;
+  min-width: 951px;
 }
 
 .portfolio__image {
+  border: 5px solid #2d303a;
   cursor: pointer;
+}
+
+.portfolio__image-selected {
+  border-color: #F06C64;
 }
 
 .portfolio__image:nth-child(n+13) {
