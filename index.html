@@ -270,14 +270,24 @@
                 </p>
                 <div class="get-quote__form-block">
                     <div class="get-quote__form">
-                        <form action method="POST">
+                        <form id="form" action method="POST">
                             <input required placeholder="Name (Required)" class="get-quote__input" type="text" />
                             <input required placeholder="Email (Required)" class="get-quote__input" type="email" />
-                            <input required placeholder="Subject" class="get-quote__input" type="text" />
+                            <input placeholder="Subject" class="get-quote__input" type="text" />
                             <textarea placeholder="Describe your project in detail..." class="get-quote__textarea"
                                 cols="30" rows="10"></textarea>
                             <div class="qet-quote__button-block">
                                 <button type="submit" class="qet-quote__button">Submit</button>
+                            </div>
+                            <div class="pop-up hidden">
+                                <div class="pop-up-content">
+                                    <p class="success">Письмо отправлено</p>
+                                    <p class="subject-true hidden">Тема: Singolo</p>
+                                    <p class="subject-false hidden">Без темы</p>
+                                    <p class="description-true hidden">Описание: Portfolio project</p>
+                                    <p class="description-false hidden">Без описания</p>
+                                    <input type="button" value="OK">
+                                </div>
                             </div>
                         </form>
                     </div>

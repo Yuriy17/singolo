@@ -70,6 +70,7 @@ const addSlider = () => {
   forwardButton.addEventListener("click", () => {
     changeSlide(true);
   });
+
   backButton.addEventListener("click", () => {
     changeSlide(false);
   });
@@ -106,18 +107,20 @@ const addActiveTabAndImages = () => {
 
   const IMAGES = TABS.nextElementSibling;
   const images = [...IMAGES.querySelectorAll("img")];
+
   IMAGES.addEventListener("click", event => {
     images.forEach(element => {
       element.classList.remove("portfolio__image-selected");
     });
     event.target.classList.add("portfolio__image-selected");
   });
+
   TABS.addEventListener("click", event => {
     if (!event.target.matches(".tag-selected")) {
       // randomize images, after changing tab
       const arr = [];
       while (arr.length < images.length) {
-        var r = Math.floor(Math.random() * 12) + 1;
+        var r = Math.floor(Math.random() * images.length) + 1;
         if (arr.indexOf(r) === -1) arr.push(r);
       }
       images.forEach((element, index) => {
@@ -130,6 +133,36 @@ const addActiveTabAndImages = () => {
     event.target.classList.add("tag-selected");
   });
 };
+const addPopUpToForm = () =>{
+  const FORM = document.getElementById('form');
+  const POPUP = FORM.querySelector('.pop-up');
+  FORM.addEventListener('submit',(event)=>{
+    event.preventDefault();
+    POPUP.classList.remove('hidden');
+    inputs = FORM.querySelectorAll('.get-quote__input');
+
+    inputs.forEach(element => {
+      element.classList.remove("hidden");
+    });
+
+    if(inputs[2].value.toString()===''){
+      POPUP.querySelector('.subject-true').classList.add('hidden');
+    }else{
+      POPUP.querySelector('.subject-false').classList.add('hidden');
+    }
+    
+    if(FORM.querySelector('.get-quote__textarea').value.toString()===''){
+      POPUP.querySelector('.description-true').classList.add('hidden');
+    }else{
+      POPUP.querySelector('.description-false').classList.add('hidden');
+    }
+    
+  });
+  POPUP.querySelector('input').addEventListener('click',(event)=>{
+    POPUP.classList.add('hidden');
+  })
+
+}
 document.addEventListener("DOMContentLoaded", () => {
   // Header menu
   addActiveLinkToMenu();
@@ -139,4 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //Portfolio
   addActiveTabAndImages();
+
+  //GetQuote form
+  addPopUpToForm();
 });
