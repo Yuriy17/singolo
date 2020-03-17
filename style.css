@@ -179,6 +179,8 @@ a {
   opacity: 20%;
   top: 50%;
   transition: all 0.2s;
+  cursor: pointer;
+  user-select: none;
 }
 
 .slider__right-arrow:hover {
@@ -205,11 +207,13 @@ a {
   padding-top: 6.9%;
   padding-bottom: 7.2%;
   position: relative;
+  user-select: none;
 }
 
 .slider__slide-horizontal-mobile {
   position: relative;
   padding-top: 22%;
+  user-select: none;
 }
 
 .slide__vertical-mobile-body {
@@ -517,6 +521,7 @@ a {
 
 .links-icons {
   display: flex;
+  user-select: none;
 }
 
 .ico {
