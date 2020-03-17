@@ -19,20 +19,19 @@
                     <span class="header__title-star">*</span>
                 </h1>
             </div>
-            <ul class="header__list">
-                <li class="header__list-item"><a class="header__list-link header__list-link-selected" href="#">HOME</a>
-                </li>
-                <li class="header__list-item"><a class="header__list-link" href="#">SERVICES</a></li>
-                <li class="header__list-item"><a class="header__list-link" href="#">PORTFOLIO</a></li>
-                <li class="header__list-item"><a class="header__list-link" href="#">ABOUT</a></li>
-                <li class="header__list-item"><a class="header__list-link" href="#">CONTACT</a></li>
+            <ul id="menu" class="header__list">
+                <li class="header__list-item"><a class="header__list-link header__list-link-selected" href="#">HOME</a></li>
+                <li class="header__list-item"><a class="header__list-link" href="#services">SERVICES</a></li>
+                <li class="header__list-item"><a class="header__list-link" href="#portfolio">PORTFOLIO</a></li>
+                <li class="header__list-item"><a class="header__list-link" href="#about">ABOUT</a></li>
+                <li class="header__list-item"><a class="header__list-link" href="#contact">CONTACT</a></li>
             </ul>
         </div>
     </header>
     <main>
         <section class="slider">
-            <div class="wrapper slider__wrapper">
-                <div class="slider__slide">
+            <div id="slider" class="wrapper slider__wrapper">
+                <div class="slider__slide active">
                     <div class="slider__slide-vertical-mobile">
                         <img src="assets/images/Vertical-Phone.png" alt="Vertical Phone Image"
                             class="slide__vertical-mobile-body">
@@ -44,11 +43,12 @@
                         <div class="slide__horizontal-mobile-content"></div>
                     </div>
                 </div>
-                <img class="slider__left-arrow" src="assets/images/left-arrow.png" alt="left arrow">
-                <img class="slider__right-arrow" src="assets/images/right-arrow.png" alt="right arrow">
+                <div  class="slider__slide"><img src="./assets/images/slide-2.jpg" alt="slide-2"></div>
+                <img class="slider__left-arrow arrow" src="assets/images/left-arrow.png" alt="left arrow">
+                <img class="slider__right-arrow arrow" src="assets/images/right-arrow.png" alt="right arrow">
             </div>
         </section>
-        <section class="services">
+        <section id="services" class="services">
             <div class="wrapper services__wrapper">
                 <div class="services__description">
                     <div class="services__description-header">Our Services</div>
@@ -134,13 +134,13 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <section id="portfolio" class="portfolio">
             <div class="wrapper portfolio__wrapper">
                 <h2 class="portfolio__title">Portfolio</h2>
                 <p class="portfolio__description">
                     Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
                 </p>
-                <div class="tags portfolio__tags">
+                <div id="tabs" class="tags portfolio__tags">
                     <span class="tag tag-bordered tag-selected">All</span>
                     <span class="tag tag-bordered">Web Design</span>
                     <span class="tag tag-bordered">Graphic Design</span>
@@ -174,7 +174,7 @@
                 </div>
             </div>
         </section>
-        <section class="about-us">
+        <section id="about" class="about-us">
             <div class="wrapper about-us__wrapper">
                 <h2 class="about-us__title">About Us</h2>
                 <p class="about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -259,7 +259,7 @@
                 </div>
             </div>
         </section>
-        <section class="get-quote">
+        <section id="contact" class="get-quote">
             <div class="wrapper get-quote__wrapper">
                 <h2 class="get-quote__title">Get a Quote</h2>
                 <p class="get-quote__description">
@@ -270,14 +270,25 @@
                 </p>
                 <div class="get-quote__form-block">
                     <div class="get-quote__form">
-                        <form action method="POST">
+                        <form id="form" action method="POST">
                             <input required placeholder="Name (Required)" class="get-quote__input" type="text" />
                             <input required placeholder="Email (Required)" class="get-quote__input" type="email" />
-                            <input required placeholder="Subject" class="get-quote__input" type="text" />
+                            <input placeholder="Subject" class="get-quote__input" type="text" />
                             <textarea placeholder="Describe your project in detail..." class="get-quote__textarea"
                                 cols="30" rows="10"></textarea>
                             <div class="qet-quote__button-block">
                                 <button type="submit" class="qet-quote__button">Submit</button>
+                            </div>
+                            <div class="pop-up hidden">
+                                <div class="pop-up-content">
+                                    <a href="#" class="close"></a>
+                                    <h3 class="success">Письмо отправлено</h3>
+                                    <p class="subject-true hidden">Тема: </p>
+                                    <p class="subject-false hidden">Без темы</p>
+                                    <p class="description-true hidden">Описание: </p>
+                                    <p class="description-false hidden">Без описания</p>
+                                    <input type="button" value="OK">
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -393,6 +404,7 @@
 
         </defs>
     </svg>
+    <script src="script.js"></script>
 </body>
 
 </html>
