@@ -140,27 +140,38 @@ const addPopUpToForm = () =>{
     event.preventDefault();
     POPUP.classList.remove('hidden');
     inputs = FORM.querySelectorAll('.get-quote__input');
-
-    inputs.forEach(element => {
+    console.log(POPUP.querySelector('.pop-up-content'));
+    
+    POPUP.querySelectorAll('.hidden').forEach(element => {
       element.classList.remove("hidden");
     });
 
-    if(inputs[2].value.toString()===''){
-      POPUP.querySelector('.subject-true').classList.add('hidden');
+    const subjectTrue = POPUP.querySelector('.subject-true');
+    const subjectContent = inputs[2].value.toString();
+    if(subjectContent ===''){
+      subjectTrue.classList.add('hidden');
     }else{
       POPUP.querySelector('.subject-false').classList.add('hidden');
+      subjectTrue.textContent+=subjectContent;
     }
-    
-    if(FORM.querySelector('.get-quote__textarea').value.toString()===''){
-      POPUP.querySelector('.description-true').classList.add('hidden');
+
+    const descriptionTrue = POPUP.querySelector('.description-true');
+    const textareaContent = FORM.querySelector('.get-quote__textarea').value.toString();
+    if(textareaContent===''){
+      descriptionTrue.classList.add('hidden');
     }else{
       POPUP.querySelector('.description-false').classList.add('hidden');
+      descriptionTrue.textContent+=textareaContent;
     }
     
   });
-  POPUP.querySelector('input').addEventListener('click',(event)=>{
+  POPUP.querySelector('input[type=button]').addEventListener('click',(event)=>{
     POPUP.classList.add('hidden');
-  })
+  });
+  POPUP.querySelector('.close').addEventListener('click',(event)=>{
+    event.preventDefault();
+    POPUP.classList.add('hidden');
+  });
 
 }
 document.addEventListener("DOMContentLoaded", () => {
