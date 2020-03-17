@@ -156,21 +156,29 @@ const addPopUpToForm = () =>{
     }
 
     const descriptionTrue = POPUP.querySelector('.description-true');
-    const textareaContent = FORM.querySelector('.get-quote__textarea').value.toString();
-    if(textareaContent===''){
+    const textarea = FORM.querySelector('.get-quote__textarea');
+    if(textarea.value.toString()===''){
       descriptionTrue.classList.add('hidden');
     }else{
       POPUP.querySelector('.description-false').classList.add('hidden');
-      descriptionTrue.textContent+=textareaContent;
+      descriptionTrue.textContent+=textarea.value.toString();
     }
     
   });
   POPUP.querySelector('input[type=button]').addEventListener('click',(event)=>{
     POPUP.classList.add('hidden');
+    inputs.forEach(element => {
+      element.value = '';
+    });
+    FORM.querySelector('.get-quote__textarea').value = '';
   });
   POPUP.querySelector('.close').addEventListener('click',(event)=>{
     event.preventDefault();
     POPUP.classList.add('hidden');
+    inputs.forEach(element => {
+      element.value = '';
+    });
+    FORM.querySelector('.get-quote__textarea').value = '';
   });
 
 }
