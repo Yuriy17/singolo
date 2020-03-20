@@ -1,8 +1,8 @@
 const addActiveLinkToMenu = () => {
   const MENU = document.getElementById("menu");
-
+  const links = MENU.querySelectorAll(".header__list-link");
   MENU.addEventListener("click", event => {
-    MENU.querySelectorAll(".header__list-link").forEach(element => {
+    links.forEach(element => {
       element.classList.remove("header__list-link-selected");
     });
     event.target.classList.add("header__list-link-selected");
@@ -174,7 +174,7 @@ const addPopUpToForm = () =>{
   });
 
 }
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
   // Header menu
   addActiveLinkToMenu();
 
@@ -186,4 +186,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //GetQuote form
   addPopUpToForm();
-});
+};

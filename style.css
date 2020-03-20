@@ -39,7 +39,10 @@ a {
   align-items: center;
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
-  padding: 0 4rem;
+  position: fixed;
+  z-index: 3000;
+  left: calc(50% - 510px);
+  top: 0;
 }
 
 .header__title {
@@ -95,7 +98,7 @@ a {
 }
 
 .wrapper {
-  max-width: 1020px;
+  width: 1020px;
   margin: auto;
   padding: 0 4rem;
 }
@@ -128,6 +131,7 @@ a {
 }
 .layout-4-columns > * {
   margin-bottom: 9px;
+  margin-right: -5px;
 }
 
 .footer__wrapper {
@@ -155,6 +159,7 @@ a {
   overflow: hidden;
   min-height: 600px;
   padding: 0;
+  margin-top: 95px;
 }
 .slider__wrapper .active {
   z-index: 1000;
@@ -456,7 +461,6 @@ a {
   padding-bottom: 54px;
   margin-left: -5px;
   margin-top: -5px;
-  min-width: 951px;
 }
 
 .portfolio__image {
