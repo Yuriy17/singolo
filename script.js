@@ -5,7 +5,7 @@ const addActiveLinkToMenu = () => {
 
   
   document.addEventListener('scroll', ()  => {
-    const curPos = window.scrollY+94;
+    const curPos = window.scrollY+96;
 
     sections.forEach((element) => {
       if(element.offsetTop <= curPos && (element.offsetTop + element.offsetHeight) > curPos){
@@ -18,12 +18,7 @@ const addActiveLinkToMenu = () => {
       }
     })
   })
-  MENU.addEventListener("click", event => {
-    links.forEach(element => {
-      element.classList.remove("header__list-link-selected");
-    });
-    event.target.classList.add("header__list-link-selected");
-  });
+
 };
 
 const addSlider = () => {
