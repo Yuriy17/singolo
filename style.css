@@ -3,6 +3,13 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+a.anchor {
+  display: block;
+  position: relative;
+  top: -94px;
+  height: 0;
+  visibility: hidden;
+}
 
 body {
   font-family: "Lato", Verdana, sans-serif;
@@ -154,12 +161,12 @@ a {
 .slider__wrapper {
   display: flex;
   justify-content: center;
-  border-bottom: 6px solid #ea676b;
+  border-bottom: 9px solid #ea676b;
   position: relative;
   overflow: hidden;
   min-height: 600px;
   padding: 0;
-  margin-top: 95px;
+  margin-top: 94px;
 }
 .slider__wrapper .active {
   z-index: 1000;
@@ -341,7 +348,7 @@ a {
 
 .services__item {
   display: flex;
-  margin-bottom: 29px;
+  margin-bottom: 33px;
   width: 33%;
 }
 

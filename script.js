@@ -1,6 +1,23 @@
 const addActiveLinkToMenu = () => {
   const MENU = document.getElementById("menu");
   const links = MENU.querySelectorAll(".header__list-link");
+  const sections = document.querySelectorAll('main > section');
+
+  
+  document.addEventListener('scroll', ()  => {
+    const curPos = window.scrollY+94;
+
+    sections.forEach((element) => {
+      if(element.offsetTop <= curPos && (element.offsetTop + element.offsetHeight) > curPos){
+        links.forEach((a) =>{
+          a.classList.remove('header__list-link-selected');
+          if(element.querySelector('a.anchor').getAttribute('id')=== a.getAttribute('href').substring(1)){
+            a.classList.add('header__list-link-selected');
+          }
+        })
+      }
+    })
+  })
   MENU.addEventListener("click", event => {
     links.forEach(element => {
       element.classList.remove("header__list-link-selected");
@@ -12,7 +29,7 @@ const addActiveLinkToMenu = () => {
 const addSlider = () => {
   const SLIDETIME = 500; //ms
   // --------------------------
-  const SLIDER = document.getElementById("slider");
+  const SLIDER = document.getElementById("slider").closest('section');
   const backButton = SLIDER.querySelector(".slider__left-arrow");
   const forwardButton = SLIDER.querySelector(".slider__right-arrow");
   // Select all slides and convert node to array for easy handling
