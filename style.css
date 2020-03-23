@@ -3,13 +3,6 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-a.anchor {
-  display: block;
-  position: relative;
-  top: -94px;
-  height: 0;
-  visibility: hidden;
-}
 
 body {
   font-family: "Lato", Verdana, sans-serif;
@@ -34,9 +27,22 @@ a {
   outline: none;
   text-decoration: none;
 }
+a.anchor {
+  display: block;
+  position: relative;
+  top: -94px;
+  height: 0;
+  visibility: hidden;
+}
 
 * {
   box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1020px;
+  margin: auto;
+  padding: 0 40px;
 }
 
 .header__wrapper {
@@ -50,8 +56,18 @@ a {
   z-index: 3000;
   left: calc(50% - 510px);
   top: 0;
+  width: 100%;
 }
-
+@media (max-width: 1020px) {
+  .header__wrapper {
+    left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .header__wrapper {
+    padding-right: 25px;
+  }
+}
 .header__title {
   font-size: 2.5rem;
   line-height: 3rem;
@@ -65,49 +81,41 @@ a {
 .header__title h1:hover {
   color: #f06c64;
 }
-
 .header__title-star {
   margin-left: -0.6rem;
   color: #f06c64;
 }
-
 .header__list {
   padding-top: 10px;
 }
-
+@media (max-width: 768px) {
+  .header__list {
+    padding-top: 4px;
+  }
+}
 .header__list-item {
   list-style: none;
   display: inline;
   font-size: 1.2rem;
   font-family: "Lato";
 }
-
 .header__list-item:before {
   content: " ·";
-  color: #666d89;
+  color: #ffffff;
   margin-left: 10px;
   margin-right: 13px;
 }
-
 .header__list-item:first-child:before {
   content: none;
 }
-
 .header__list-link {
   color: #ffffff;
 }
 .header__list-link:hover {
   text-decoration: underline;
 }
-
 .header__list-link-selected {
   color: #f06c64;
-}
-
-.wrapper {
-  width: 1020px;
-  margin: auto;
-  padding: 0 4rem;
 }
 
 .layout-2-columns {
@@ -171,20 +179,24 @@ a {
 .slider__wrapper .active {
   z-index: 1000;
 }
-
+@media (max-width: 768px) {
+  .slider__wrapper {
+    min-height: 453px;
+  }
+}
 .slider__left-arrow {
   left: 4%;
 }
-
 .slider__left-arrow:hover {
   opacity: 100%;
 }
-
 .slider__right-arrow {
   right: 4%;
 }
-
-.arrow {
+.slider__right-arrow:hover {
+  opacity: 100%;
+}
+.slider__arrow {
   z-index: 20000;
   position: absolute;
   transform: translateY(-50%);
@@ -194,11 +206,6 @@ a {
   cursor: pointer;
   user-select: none;
 }
-
-.slider__right-arrow:hover {
-  opacity: 100%;
-}
-
 .slider__slide {
   position: absolute;
   z-index: 500;
@@ -210,30 +217,46 @@ a {
   background-color: #f06c64;
   padding: 0 110px;
 }
+@media (max-width: 768px) {
+  .slider__slide:nth-child(1) {
+    padding: 0 67px 0 82px;
+  }
+}
 .slider__slide img {
   object-fit: cover;
   pointer-events: none;
 }
-
 .slider__slide-vertical-mobile {
-  padding-top: 6.9%;
-  padding-bottom: 7.2%;
+  padding-top: 56px;
+  padding-bottom: 54px;
   position: relative;
   user-select: none;
 }
-
+@media (max-width: 768px) {
+  .slider__slide-vertical-mobile {
+    padding-top: 40px;
+  }
+}
 .slider__slide-horizontal-mobile {
   position: relative;
-  padding-top: 22%;
+  padding-top: 176px;
   user-select: none;
+}
+@media (max-width: 768px) {
+  .slider__slide-horizontal-mobile {
+    padding-top: 134px;
+  }
 }
 
 .slide__vertical-mobile-body {
-  width: 100%;
   height: auto;
-  max-width: 240px;
+  width: 240px;
 }
-
+@media (max-width: 768px) {
+  .slide__vertical-mobile-body {
+    width: 183px;
+  }
+}
 .slide__vertical-mobile-content {
   position: absolute;
   border: 3px solid #aaaaaa;
@@ -248,17 +271,26 @@ a {
   left: 13px;
   cursor: pointer;
 }
-
+@media (max-width: 768px) {
+  .slide__vertical-mobile-content {
+    width: 147px;
+    height: 256px;
+    top: 88px;
+    left: 10px;
+  }
+}
 .slide__vertical-mobile-content:hover {
   border: 3px solid #c7c8c7;
 }
-
 .slide__horizontal-mobile-body {
-  width: 100%;
-  max-width: 482px;
+  width: 482px;
   height: auto;
 }
-
+@media (max-width: 768px) {
+  .slide__horizontal-mobile-body {
+    width: 368px;
+  }
+}
 .slide__horizontal-mobile-content {
   position: absolute;
   border: 3px solid #aaaaaa;
@@ -273,7 +305,14 @@ a {
   left: 54px;
   cursor: pointer;
 }
-
+@media (max-width: 768px) {
+  .slide__horizontal-mobile-content {
+    height: 147px;
+    width: 256px;
+    top: 142px;
+    left: 44px;
+  }
+}
 .slide__horizontal-mobile-content:hover {
   border: 3px solid #c7c8c7;
 }
