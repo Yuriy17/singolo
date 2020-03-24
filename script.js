@@ -118,7 +118,7 @@ const addActiveTabAndImages = () => {
   const TABS = document.getElementById("tabs");
 
   const IMAGES = TABS.nextElementSibling;
-  const images = [...IMAGES.querySelectorAll("img")];
+  const images = [...IMAGES.querySelectorAll("span")];
 
   IMAGES.addEventListener("click", event => {
     images.forEach(element => {
