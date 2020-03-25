@@ -80,6 +80,11 @@ a.anchor {
   margin: auto;
   padding: 0 40px;
 }
+@media (max-width: 375px) {
+  .wrapper {
+    padding: 0 32px;
+  }
+}
 
 .header__wrapper {
   display: flex;
@@ -486,15 +491,21 @@ a.anchor {
   padding: 46px 0 47px 0;
   min-width: 944px;
 }
+@media (max-width: 1020px) {
+  .services__description {
+    min-width: auto;
+  }
+}
 @media (max-width: 768px) {
   .services__description {
     padding-top: 26px;
     padding-bottom: 37px;
   }
 }
-@media (max-width: 1020px) {
+@media (max-width: 375px) {
   .services__description {
-    min-width: auto;
+    padding-top: 12px;
+    padding-bottom: 30px;
   }
 }
 .services__description-header {
@@ -529,6 +540,11 @@ a.anchor {
     padding-bottom: 22px;
   }
 }
+@media (max-width: 375px) {
+  .services__list {
+    padding-bottom: 0;
+  }
+}
 .services__item {
   display: flex;
   margin-bottom: 29px;
@@ -539,6 +555,12 @@ a.anchor {
   .services__item {
     margin-bottom: 52px;
     margin-right: 34px;
+  }
+}
+@media (max-width: 375px) {
+  .services__item {
+    margin-bottom: 27px;
+    margin-right: 0;
   }
 }
 .services__item-icon {
@@ -577,6 +599,9 @@ a.anchor {
     border-bottom: none;
   }
 }
+.about-us__wrapper > div {
+  padding-bottom: 11px;
+}
 .about-us__title {
   color: #666d89;
   margin-top: 53px;
@@ -589,6 +614,11 @@ a.anchor {
     margin-top: 46px;
     letter-spacing: 0;
     margin-left: 0px;
+  }
+}
+@media (max-width: 375px) {
+  .about-us__title {
+    margin-top: 27px;
   }
 }
 .about-us__description {
@@ -607,6 +637,11 @@ a.anchor {
     margin-bottom: 37px;
   }
 }
+@media (max-width: 375px) {
+  .about-us__description {
+    margin-bottom: 23px;
+  }
+}
 
 .employee {
   max-width: 301px;
@@ -614,6 +649,12 @@ a.anchor {
 @media (max-width: 1020px) {
   .employee {
     width: 32.3%;
+  }
+}
+@media (max-width: 375px) {
+  .employee {
+    flex-basis: 100%;
+    max-width: none;
   }
 }
 .employee:not(:last-child) > .employee__image {
@@ -624,10 +665,21 @@ a.anchor {
     margin-left: 0;
   }
 }
+@media (max-width: 375px) {
+  .employee:not(:last-child) > .employee__image {
+    margin-left: -3px;
+  }
+}
 @media (max-width: 1020px) {
   .employee__image {
     width: 100%;
     height: auto;
+  }
+}
+@media (max-width: 375px) {
+  .employee__image {
+    width: 102%;
+    margin-left: -3px;
   }
 }
 .employee__title {
@@ -644,6 +696,12 @@ a.anchor {
     margin-bottom: 2px;
   }
 }
+@media (max-width: 375px) {
+  .employee__title {
+    margin-left: 0;
+    margin-top: 17px;
+  }
+}
 .employee__description {
   font-size: 1.2rem;
   font-style: normal;
@@ -658,6 +716,11 @@ a.anchor {
     margin-left: 3px;
   }
 }
+@media (max-width: 375px) {
+  .employee__description {
+    margin-left: 0;
+  }
+}
 .employee__contacts {
   margin-top: 22px;
   margin-bottom: 67px;
@@ -667,6 +730,12 @@ a.anchor {
     margin-top: 10px;
     margin-left: 3px;
     margin-bottom: 73px;
+  }
+}
+@media (max-width: 375px) {
+  .employee__contacts {
+    margin-left: 0;
+    margin-bottom: 34px;
   }
 }
 
@@ -680,6 +749,13 @@ a.anchor {
   letter-spacing: 0.029rem;
   margin-top: 54px;
   margin-bottom: 12px;
+}
+@media (max-width: 375px) {
+  .portfolio__title {
+    letter-spacing: normal;
+    margin-top: 36px;
+    margin-bottom: 12px;
+  }
 }
 .portfolio__description {
   color: #767e9e;
@@ -695,6 +771,11 @@ a.anchor {
     margin-right: 43px;
   }
 }
+@media (max-width: 375px) {
+  .portfolio__description {
+    margin-right: 0;
+  }
+}
 .portfolio__tags {
   margin-top: 11px;
   margin-bottom: 9px;
@@ -702,6 +783,11 @@ a.anchor {
 @media (max-width: 960px) {
   .portfolio__tags {
     margin-bottom: 18px;
+  }
+}
+@media (max-width: 375px) {
+  .portfolio__tags {
+    margin: 15px 0 19px 0;
   }
 }
 .portfolio__images {
@@ -716,6 +802,13 @@ a.anchor {
     padding-bottom: 57px;
   }
 }
+@media (max-width: 375px) {
+  .portfolio__images {
+    margin-left: -9px;
+    margin-right: -9px;
+    padding-bottom: 27px;
+  }
+}
 .portfolio__image {
   cursor: pointer;
   background-repeat: no-repeat;
@@ -727,6 +820,15 @@ a.anchor {
 @media (max-width: 768px) {
   .portfolio__image {
     flex-basis: calc(100%/3 - 15px);
+  }
+}
+@media (max-width: 375px) {
+  .portfolio__image {
+    margin: 2px;
+    flex-basis: calc(50% - 4px);
+  }
+  .portfolio__image:nth-child(n+9) {
+    display: none;
   }
 }
 .portfolio__image::before {
