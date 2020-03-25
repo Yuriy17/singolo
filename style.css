@@ -234,14 +234,30 @@ a.anchor {
     min-height: 453px;
   }
 }
+@media (max-width: 600px) {
+  .slider__wrapper {
+    margin-top: 71px;
+    min-height: 221px;
+  }
+}
 .slider__left-arrow {
   left: 4%;
+}
+@media (max-width: 600px) {
+  .slider__left-arrow {
+    left: 2%;
+  }
 }
 .slider__left-arrow:hover {
   opacity: 100%;
 }
 .slider__right-arrow {
   right: 4%;
+}
+@media (max-width: 600px) {
+  .slider__right-arrow {
+    right: 2%;
+  }
 }
 .slider__right-arrow:hover {
   opacity: 100%;
@@ -255,6 +271,11 @@ a.anchor {
   transition: all 0.2s;
   cursor: pointer;
   user-select: none;
+}
+@media (max-width: 600px) {
+  .slider__arrow {
+    top: 52%;
+  }
 }
 .slider__slide {
   position: absolute;
@@ -278,6 +299,11 @@ a.anchor {
     padding: 0px 30px;
   }
 }
+@media (max-width: 600px) {
+  .slider__slide:nth-child(1) {
+    padding: 0px 14px;
+  }
+}
 .slider__slide:nth-child(2) > img {
   width: 100%;
   height: -webkit-fill-available;
@@ -297,6 +323,11 @@ a.anchor {
     padding-top: 40px;
   }
 }
+@media (max-width: 600px) {
+  .slider__slide-vertical-mobile {
+    padding-top: 19px;
+  }
+}
 .slider__slide-horizontal-mobile {
   position: relative;
   padding-top: 176px;
@@ -307,6 +338,11 @@ a.anchor {
     padding-top: 134px;
   }
 }
+@media (max-width: 600px) {
+  .slider__slide-horizontal-mobile {
+    padding-top: 65px;
+  }
+}
 
 .slide__vertical-mobile-body {
   height: auto;
@@ -315,6 +351,11 @@ a.anchor {
 @media (max-width: 960px) {
   .slide__vertical-mobile-body {
     width: 183px;
+  }
+}
+@media (max-width: 600px) {
+  .slide__vertical-mobile-body {
+    width: 89px;
   }
 }
 .slide__vertical-mobile-content {
@@ -339,6 +380,14 @@ a.anchor {
     left: 10px;
   }
 }
+@media (max-width: 600px) {
+  .slide__vertical-mobile-content {
+    width: 75px;
+    height: 128px;
+    top: 41px;
+    left: 3px;
+  }
+}
 .slide__vertical-mobile-content:hover {
   border: 3px solid #c7c8c7;
 }
@@ -349,6 +398,11 @@ a.anchor {
 @media (max-width: 960px) {
   .slide__horizontal-mobile-body {
     width: 368px;
+  }
+}
+@media (max-width: 600px) {
+  .slide__horizontal-mobile-body {
+    width: 179px;
   }
 }
 .slide__horizontal-mobile-content {
@@ -371,6 +425,14 @@ a.anchor {
     width: 256px;
     top: 142px;
     left: 44px;
+  }
+}
+@media (max-width: 600px) {
+  .slide__horizontal-mobile-content {
+    height: 75px;
+    width: 128px;
+    top: 67px;
+    left: 19px;
   }
 }
 .slide__horizontal-mobile-content:hover {
