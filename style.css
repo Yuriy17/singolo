@@ -152,20 +152,26 @@ a.anchor {
     display: none;
   }
 }
-.header__list-item {
-  list-style: none;
-  display: inline;
+.header__list-horizontal .header__list-item {
   font-size: 1.2rem;
-  font-family: "Lato";
 }
-.header__list-item:before {
+.header__list-horizontal .header__list-item::before {
   content: " ·";
   color: #ffffff;
   margin-left: 10px;
   margin-right: 13px;
 }
-.header__list-item:first-child:before {
+.header__list-horizontal .header__list-item:first-child::before {
   content: none;
+}
+.header__list-vertical {
+  display: flex;
+  flex-direction: column;
+}
+.header__list-item {
+  list-style: none;
+  display: inline;
+  font-family: "Lato";
 }
 .header__list-link {
   color: #ffffff;
@@ -175,6 +181,37 @@ a.anchor {
 }
 .header__list-link-selected {
   color: #f06c64;
+}
+.header .nav {
+  -webkit-transition: left 0.5s ease;
+  -moz-transition: left 0.5s ease;
+  -ms-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+  background: #2d303a;
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  height: 100vh;
+  left: -20rem;
+  padding: 6rem 2rem 2rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 20rem;
+  z-index: 1;
+}
+.header .nav.expanded {
+  left: 0;
+}
+.header .nav ul {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .layout-2-columns {
@@ -209,6 +246,11 @@ a.anchor {
   justify-content: space-between;
   background-color: #2d303a;
 }
+@media (max-width: 375px) {
+  .footer__wrapper {
+    justify-content: center;
+  }
+}
 .footer__copyright {
   color: #666d89;
   font-size: 1.2rem;
@@ -216,6 +258,11 @@ a.anchor {
   font-weight: 400;
   line-height: 2.2rem;
   padding-top: 27px;
+}
+@media (max-width: 375px) {
+  .footer__copyright {
+    display: none;
+  }
 }
 .footer__contacts {
   padding: 22px 0;
@@ -651,6 +698,11 @@ a.anchor {
     width: 32.3%;
   }
 }
+@media (max-width: 600px) {
+  .employee {
+    flex-basis: 100%;
+  }
+}
 @media (max-width: 375px) {
   .employee {
     flex-basis: 100%;
@@ -973,6 +1025,12 @@ a.anchor {
     margin-bottom: 11px;
   }
 }
+@media (max-width: 375px) {
+  .get-quote__title {
+    margin-top: 38px;
+    margin-bottom: 12px;
+  }
+}
 .get-quote__description {
   color: #f0c2c1;
   font-size: 1.8rem;
@@ -983,6 +1041,7 @@ a.anchor {
 }
 .get-quote__form-block {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 44px;
 }
@@ -991,12 +1050,22 @@ a.anchor {
     margin-top: 24px;
   }
 }
+@media (max-width: 600px) {
+  .get-quote__form-block {
+    margin-bottom: 43px;
+  }
+}
 .get-quote__form {
   max-width: 619px;
 }
 @media (max-width: 960px) {
   .get-quote__form {
     width: 64%;
+  }
+}
+@media (max-width: 600px) {
+  .get-quote__form {
+    width: 100%;
   }
 }
 .get-quote__form input, .get-quote__form textarea {
@@ -1047,6 +1116,12 @@ a.anchor {
   padding-left: 10px;
   width: 33%;
 }
+@media (max-width: 600px) {
+  .get-quote__content {
+    width: 100%;
+    padding-left: 0;
+  }
+}
 .get-quote__content-title {
   color: #f0c2c1;
 }
@@ -1093,6 +1168,11 @@ a.anchor {
 @media (max-width: 960px) {
   .qet-quote__button {
     margin: 20px 0 41px;
+  }
+}
+@media (max-width: 375px) {
+  .qet-quote__button {
+    width: 100%;
   }
 }
 

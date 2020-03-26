@@ -1,5 +1,5 @@
-const addActiveLinkToMenu = () => {
-  const MENU = document.getElementById("menu");
+const addActiveLinkToMenu = (node) => {
+  const MENU = node;  
   const links = MENU.querySelectorAll(".header__list-link");
   const sections = document.querySelectorAll('main > section');
 
@@ -152,7 +152,6 @@ const addPopUpToForm = () =>{
     event.preventDefault();
     POPUP.classList.remove('hidden');
     inputs = FORM.querySelectorAll('.get-quote__input');
-    console.log(POPUP.querySelector('.pop-up-content'));
     
     POPUP.querySelectorAll('.hidden').forEach(element => {
       element.classList.remove("hidden");
@@ -185,10 +184,33 @@ const addPopUpToForm = () =>{
     POPUP.classList.add('hidden');
   });
 
-}
+};
+
+const addToggleMenu = () => {
+  const hamburger = {
+    navToggle: document.querySelector('.hamburger'),
+    nav: document.querySelector('nav'),
+
+    doToggle: function(e) {
+    //  e.preventDefault();
+      this.navToggle.classList.toggle('expanded');
+      this.nav.classList.toggle('expanded');
+    }
+  };
+
+  hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
+  hamburger.nav.addEventListener('click', function(e) { hamburger.doToggle(e); });
+};
+
 window.onload = () => {
-  // Header menu
-  addActiveLinkToMenu();
+  const MENUS = document.querySelectorAll('.header__list');
+  
+
+  //  add scroll links to Header menu
+  addActiveLinkToMenu(MENUS[0]);
+
+  //  add scroll links to Toggle menu
+  addActiveLinkToMenu(MENUS[1]);
 
   // Slider
   addSlider();
@@ -198,4 +220,7 @@ window.onload = () => {
 
   //GetQuote form
   addPopUpToForm();
+
+  // add Hamburger
+  addToggleMenu();
 };
