@@ -158,7 +158,7 @@ const addPopUpToForm = () =>{
     });
 
     const subjectTrue = POPUP.querySelector('.subject-true');
-    const subjectContent = inputs[2].value.toString();
+    const subjectContent = inputs[2].value;
     if(subjectContent ===''){
       subjectTrue.classList.add('hidden');
     }else{
@@ -167,22 +167,34 @@ const addPopUpToForm = () =>{
     }
 
     const descriptionTrue = POPUP.querySelector('.description-true');
-    const textareaContent = FORM.querySelector('.get-quote__textarea').value.toString();
-    if(textareaContent===''){
+    const textareaContent = FORM.querySelector('.get-quote__textarea');
+    if(textareaContent.value===''){
       descriptionTrue.classList.add('hidden');
     }else{
       POPUP.querySelector('.description-false').classList.add('hidden');
-      descriptionTrue.textContent+=textareaContent;
+      descriptionTrue.textContent+=textareaContent.value;
     }
-    
+    POPUP.querySelector('input[type=button]').addEventListener('click',(event)=>{
+      POPUP.classList.add('hidden');
+      textareaContent.value = '';
+      inputs[2].value = '';
+      inputs[0].value = '';
+      inputs[1].value = '';
+      subjectTrue.textContent='Тема: ';
+      descriptionTrue.textContent='Описание: ';
+    });
+    POPUP.querySelector('.close').addEventListener('click',(event)=>{
+      event.preventDefault();
+      POPUP.classList.add('hidden');
+      textareaContent.value = '';
+      inputs[2].value = '';
+      inputs[0].value = '';
+      inputs[1].value = '';
+      subjectTrue.textContent='Тема: ';
+      descriptionTrue.textContent='Описание: ';
+    });
   });
-  POPUP.querySelector('input[type=button]').addEventListener('click',(event)=>{
-    POPUP.classList.add('hidden');
-  });
-  POPUP.querySelector('.close').addEventListener('click',(event)=>{
-    event.preventDefault();
-    POPUP.classList.add('hidden');
-  });
+
 
 };
 
