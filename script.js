@@ -118,8 +118,8 @@ const addActiveTabAndImages = () => {
   const TABS = document.getElementById("tabs");
 
   const IMAGES = TABS.nextElementSibling;
-  const images = [...IMAGES.querySelectorAll("span")];
-
+  const images = [...IMAGES.children];
+  
   IMAGES.addEventListener("click", event => {
     images.forEach(element => {
       element.classList.remove("portfolio__image-selected");
@@ -131,13 +131,20 @@ const addActiveTabAndImages = () => {
     if (!event.target.matches(".tag-selected")) {
       // randomize images, after changing tab
       const arr = [];
-      while (arr.length < images.length) {
-        var r = Math.floor(Math.random() * images.length) + 1;
-        if (arr.indexOf(r) === -1) arr.push(r);
+      for (let i=0; i < IMAGES.childNodes.length; i++) {
+        IMAGES.childNodes[i].remove();
       }
-      images.forEach((element, index) => {
-        element.style.order = arr[index];
-      });
+      // or IMAGES.innerHTML = '';
+      const imagesFragment = document.createDocumentFragment();
+      
+      while (arr.length < images.length) {
+        var r = Math.floor(Math.random() * images.length);
+        if (arr.indexOf(r) === -1) {
+          arr.push(r);
+          imagesFragment.appendChild(images[r]);
+        }
+      }
+      IMAGES.appendChild(imagesFragment);
     }
     TABS.querySelectorAll(".tag").forEach(element => {
       element.classList.remove("tag-selected");

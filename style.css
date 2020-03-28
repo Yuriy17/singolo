@@ -907,6 +907,42 @@ a.anchor {
   margin: 5px;
   border: 5px solid #2d303a;
   flex: 1 0 calc(25% - 15px);
+  /* &:nth-child(1) {
+    background-image: url("./assets/images/singolo2/portfolio/1.jpg");
+  }
+  &:nth-child(2) {
+    background-image: url("./assets/images/singolo2/portfolio/2.jpg");
+  }
+  &:nth-child(3) {
+    background-image: url("./assets/images/singolo2/portfolio/3.jpg");
+  }
+  &:nth-child(4) {
+    background-image: url("./assets/images/singolo2/portfolio/4.jpg");
+  }
+  &:nth-child(5) {
+    background-image: url("./assets/images/singolo2/portfolio/5.jpg");
+  }
+  &:nth-child(6) {
+    background-image: url("./assets/images/singolo2/portfolio/6.jpg");
+  }
+  &:nth-child(7) {
+    background-image: url("./assets/images/singolo2/portfolio/7.jpg");
+  }
+  &:nth-child(8) {
+    background-image: url("./assets/images/singolo2/portfolio/8.jpg");
+  }
+  &:nth-child(9) {
+    background-image: url("./assets/images/singolo2/portfolio/9.jpg");
+  }
+  &:nth-child(10) {
+    background-image: url("./assets/images/singolo2/portfolio/10.jpg");
+  }
+  &:nth-child(11) {
+    background-image: url("./assets/images/singolo2/portfolio/11.jpg");
+  }
+  &:nth-child(12) {
+    background-image: url("./assets/images/singolo2/portfolio/12.jpg");
+  } */
 }
 @media (max-width: 768px) {
   .portfolio__image {
@@ -926,42 +962,6 @@ a.anchor {
   content: "";
   padding-top: 85%;
   float: left;
-}
-.portfolio__image:nth-child(1) {
-  background-image: url("./assets/images/singolo2/portfolio/1.jpg");
-}
-.portfolio__image:nth-child(2) {
-  background-image: url("./assets/images/singolo2/portfolio/2.jpg");
-}
-.portfolio__image:nth-child(3) {
-  background-image: url("./assets/images/singolo2/portfolio/3.jpg");
-}
-.portfolio__image:nth-child(4) {
-  background-image: url("./assets/images/singolo2/portfolio/4.jpg");
-}
-.portfolio__image:nth-child(5) {
-  background-image: url("./assets/images/singolo2/portfolio/5.jpg");
-}
-.portfolio__image:nth-child(6) {
-  background-image: url("./assets/images/singolo2/portfolio/6.jpg");
-}
-.portfolio__image:nth-child(7) {
-  background-image: url("./assets/images/singolo2/portfolio/7.jpg");
-}
-.portfolio__image:nth-child(8) {
-  background-image: url("./assets/images/singolo2/portfolio/8.jpg");
-}
-.portfolio__image:nth-child(9) {
-  background-image: url("./assets/images/singolo2/portfolio/9.jpg");
-}
-.portfolio__image:nth-child(10) {
-  background-image: url("./assets/images/singolo2/portfolio/10.jpg");
-}
-.portfolio__image:nth-child(11) {
-  background-image: url("./assets/images/singolo2/portfolio/11.jpg");
-}
-.portfolio__image:nth-child(12) {
-  background-image: url("./assets/images/singolo2/portfolio/12.jpg");
 }
 .portfolio__image:nth-child(n+13) {
   display: none;
