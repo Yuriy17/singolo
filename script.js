@@ -1,5 +1,5 @@
-const addActiveLinkToMenu = () => {
-  const MENU = document.getElementById("menu");
+const addActiveLinkToMenu = (node) => {
+  const MENU = node;  
   const links = MENU.querySelectorAll(".header__list-link");
   const sections = document.querySelectorAll('main > section');
 
@@ -118,8 +118,8 @@ const addActiveTabAndImages = () => {
   const TABS = document.getElementById("tabs");
 
   const IMAGES = TABS.nextElementSibling;
-  const images = [...IMAGES.querySelectorAll("img")];
-
+  const images = [...IMAGES.children];
+  
   IMAGES.addEventListener("click", event => {
     images.forEach(element => {
       element.classList.remove("portfolio__image-selected");
@@ -131,13 +131,20 @@ const addActiveTabAndImages = () => {
     if (!event.target.matches(".tag-selected")) {
       // randomize images, after changing tab
       const arr = [];
-      while (arr.length < images.length) {
-        var r = Math.floor(Math.random() * images.length) + 1;
-        if (arr.indexOf(r) === -1) arr.push(r);
+      for (let i=0; i < IMAGES.childNodes.length; i++) {
+        IMAGES.childNodes[i].remove();
       }
-      images.forEach((element, index) => {
-        element.style.order = arr[index];
-      });
+      // or IMAGES.innerHTML = '';
+      const imagesFragment = document.createDocumentFragment();
+      
+      while (arr.length < images.length) {
+        var r = Math.floor(Math.random() * images.length);
+        if (arr.indexOf(r) === -1) {
+          arr.push(r);
+          imagesFragment.appendChild(images[r]);
+        }
+      }
+      IMAGES.appendChild(imagesFragment);
     }
     TABS.querySelectorAll(".tag").forEach(element => {
       element.classList.remove("tag-selected");
@@ -152,14 +159,13 @@ const addPopUpToForm = () =>{
     event.preventDefault();
     POPUP.classList.remove('hidden');
     inputs = FORM.querySelectorAll('.get-quote__input');
-    console.log(POPUP.querySelector('.pop-up-content'));
     
     POPUP.querySelectorAll('.hidden').forEach(element => {
       element.classList.remove("hidden");
     });
 
     const subjectTrue = POPUP.querySelector('.subject-true');
-    const subjectContent = inputs[2].value.toString();
+    const subjectContent = inputs[2].value;
     if(subjectContent ===''){
       subjectTrue.classList.add('hidden');
     }else{
@@ -168,27 +174,62 @@ const addPopUpToForm = () =>{
     }
 
     const descriptionTrue = POPUP.querySelector('.description-true');
-    const textareaContent = FORM.querySelector('.get-quote__textarea').value.toString();
-    if(textareaContent===''){
+    const textareaContent = FORM.querySelector('.get-quote__textarea');
+    if(textareaContent.value===''){
       descriptionTrue.classList.add('hidden');
     }else{
       POPUP.querySelector('.description-false').classList.add('hidden');
-      descriptionTrue.textContent+=textareaContent;
+      descriptionTrue.textContent+=textareaContent.value;
     }
-    
-  });
-  POPUP.querySelector('input[type=button]').addEventListener('click',(event)=>{
-    POPUP.classList.add('hidden');
-  });
-  POPUP.querySelector('.close').addEventListener('click',(event)=>{
-    event.preventDefault();
-    POPUP.classList.add('hidden');
+    POPUP.querySelector('input[type=button]').addEventListener('click',(event)=>{
+      POPUP.classList.add('hidden');
+      textareaContent.value = '';
+      inputs[2].value = '';
+      inputs[0].value = '';
+      inputs[1].value = '';
+      subjectTrue.textContent='Тема: ';
+      descriptionTrue.textContent='Описание: ';
+    });
+    POPUP.querySelector('.close').addEventListener('click',(event)=>{
+      event.preventDefault();
+      POPUP.classList.add('hidden');
+      textareaContent.value = '';
+      inputs[2].value = '';
+      inputs[0].value = '';
+      inputs[1].value = '';
+      subjectTrue.textContent='Тема: ';
+      descriptionTrue.textContent='Описание: ';
+    });
   });
 
-}
+
+};
+
+const addToggleMenu = () => {
+  const hamburger = {
+    navToggle: document.querySelector('.hamburger'),
+    nav: document.querySelector('nav'),
+
+    doToggle: function(e) {
+    //  e.preventDefault();
+      this.navToggle.classList.toggle('expanded');
+      this.nav.classList.toggle('expanded');
+    }
+  };
+
+  hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
+  hamburger.nav.addEventListener('click', function(e) { hamburger.doToggle(e); });
+};
+
 window.onload = () => {
-  // Header menu
-  addActiveLinkToMenu();
+  const MENUS = document.querySelectorAll('.header__list');
+  
+
+  //  add scroll links to Header menu
+  addActiveLinkToMenu(MENUS[0]);
+
+  //  add scroll links to Toggle menu
+  addActiveLinkToMenu(MENUS[1]);
 
   // Slider
   addSlider();
@@ -198,4 +239,7 @@ window.onload = () => {
 
   //GetQuote form
   addPopUpToForm();
+
+  // add Hamburger
+  addToggleMenu();
 };

@@ -12,26 +12,45 @@
 
 <body>
     <header class="header">
+        <span class="hamburger"><span class="hamburger__line"></span></span>
         <div class="wrapper header__wrapper">
-            <div class="header__title">
+            <div class="header__title header__title-main">
                 <h1>
                     SINGOLO
                     <span class="header__title-star">*</span>
                 </h1>
             </div>
-            <ul id="menu" class="header__list">
-                <li class="header__list-item"><a class="header__list-link header__list-link-selected" href="#slider">HOME</a></li>
-                <li class="header__list-item"><a class="header__list-link" href="#services">SERVICES</a></li>
-                <li class="header__list-item"><a class="header__list-link" href="#portfolio">PORTFOLIO</a></li>
-                <li class="header__list-item"><a class="header__list-link" href="#about">ABOUT</a></li>
-                <li class="header__list-item"><a class="header__list-link" href="#contact">CONTACT</a></li>
-            </ul>
-        </div>
+            <ul class="header__list header__list-horizontal">
+                <li class="header__list-item"><a class="header__list-link header__list-link-selected"
+                    href="#slider">HOME</a></li>
+                    <li class="header__list-item"><a class="header__list-link" href="#services">SERVICES</a></li>
+                    <li class="header__list-item"><a class="header__list-link" href="#portfolio">PORTFOLIO</a></li>
+                    <li class="header__list-item"><a class="header__list-link" href="#about">ABOUT</a></li>
+                    <li class="header__list-item"><a class="header__list-link" href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <div class="header__title header__title-additional">
+                    <h3>
+                        SINGOLO
+                        <span class="header__title-star">*</span>
+                    </h3>
+                </div>
+                <ul class="header__list header__list-vertical">
+                    <li class="header__list-item"><a class="header__list-link header__list-link-selected"
+                        href="#slider">HOME</a></li>
+                        <li class="header__list-item"><a class="header__list-link" href="#services">SERVICES</a></li>
+                        <li class="header__list-item"><a class="header__list-link" href="#portfolio">PORTFOLIO</a></li>
+                        <li class="header__list-item"><a class="header__list-link" href="#about">ABOUT</a></li>
+                        <li class="header__list-item"><a class="header__list-link" href="#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+                
     </header>
     <main>
-        <section  class="slider">
+        <section class="slider">
             <a id="slider" class="anchor"></a>
-            <div  class="wrapper slider__wrapper">
+            <div class="wrapper slider__wrapper">
                 <div class="slider__slide active">
                     <div class="slider__slide-vertical-mobile">
                         <img src="assets/images/Vertical-Phone.png" alt="Vertical Phone Image"
@@ -44,12 +63,12 @@
                         <div class="slide__horizontal-mobile-content"></div>
                     </div>
                 </div>
-                <div  class="slider__slide"><img src="./assets/images/slide-2.jpg" alt="slide-2"></div>
-                <img class="slider__left-arrow arrow" src="assets/images/left-arrow.png" alt="left arrow">
-                <img class="slider__right-arrow arrow" src="assets/images/right-arrow.png" alt="right arrow">
+                <div class="slider__slide"><img src="./assets/images/slide-2.jpg" alt="slide-2"></div>
+                <img class="slider__left-arrow slider__arrow" src="assets/images/left-arrow.png" alt="left arrow">
+                <img class="slider__right-arrow slider__arrow" src="assets/images/right-arrow.png" alt="right arrow">
             </div>
         </section>
-        <section  class="services">
+        <section class="services">
             <a id="services" class="anchor"></a>
             <div class="wrapper services__wrapper">
                 <div class="services__description">
@@ -136,7 +155,7 @@
                 </div>
             </div>
         </section>
-        <section  class="portfolio">
+        <section class="portfolio">
             <a id="portfolio" class="anchor"></a>
             <div class="wrapper portfolio__wrapper">
                 <h2 class="portfolio__title">Portfolio</h2>
@@ -149,35 +168,23 @@
                     <span class="tag tag-bordered">Graphic Design</span>
                     <span class="tag tag-bordered">Artwork</span>
                 </div>
-                <div class="layout-4-columns portfolio__images">
-                    <img src="./assets/images/singolo2/portfolio/1.jpg" alt="portfolio image 1"
-                        class="portfolio__image">
-                    <img src="./assets/images/singolo2/portfolio/2.jpg" alt="portfolio image 2"
-                        class="portfolio__image">
-                    <img src="./assets/images/singolo2/portfolio/3.jpg" alt="portfolio image 3"
-                        class="portfolio__image">
-                    <img src="./assets/images/singolo2/portfolio/4.jpg" alt="portfolio image 4"
-                        class="portfolio__image">
-                    <img src="./assets/images/singolo2/portfolio/5.jpg" alt="portfolio image 5"
-                        class="portfolio__image">
-                    <img src="./assets/images/singolo2/portfolio/6.jpg" alt="portfolio image 6"
-                        class="portfolio__image">
-                    <img src="./assets/images/singolo2/portfolio/7.jpg" alt="portfolio image 7"
-                        class="portfolio__image">
-                    <img src="./assets/images/singolo2/portfolio/8.jpg" alt="portfolio image 8"
-                        class="portfolio__image">
-                    <img src="./assets/images/singolo2/portfolio/9.jpg" alt="portfolio image 9"
-                        class="portfolio__image">
-                    <img src="./assets/images/singolo2/portfolio/10.jpg" alt="portfolio image 10"
-                        class="portfolio__image">
-                    <img src="./assets/images/singolo2/portfolio/11.jpg" alt="portfolio image 11"
-                        class="portfolio__image">
-                    <img src="./assets/images/singolo2/portfolio/12.jpg" alt="portfolio image 12"
-                        class="portfolio__image">
+                <div class="portfolio__images">
+                    <span class="portfolio__image" style="background-image: url('./assets/images/singolo2/portfolio/1.jpg')"></span>
+                    <span class="portfolio__image" style="background-image: url('./assets/images/singolo2/portfolio/2.jpg')"></span>
+                    <span class="portfolio__image" style="background-image: url('./assets/images/singolo2/portfolio/3.jpg')"></span>
+                    <span class="portfolio__image" style="background-image: url('./assets/images/singolo2/portfolio/4.jpg')"></span>
+                    <span class="portfolio__image" style="background-image: url('./assets/images/singolo2/portfolio/5.jpg')"></span>
+                    <span class="portfolio__image" style="background-image: url('./assets/images/singolo2/portfolio/6.jpg')"></span>
+                    <span class="portfolio__image" style="background-image: url('./assets/images/singolo2/portfolio/7.jpg')"></span>
+                    <span class="portfolio__image" style="background-image: url('./assets/images/singolo2/portfolio/8.jpg')"></span>
+                    <span class="portfolio__image" style="background-image: url('./assets/images/singolo2/portfolio/9.jpg')"></span>
+                    <span class="portfolio__image" style="background-image: url('./assets/images/singolo2/portfolio/10.jpg')"></span>
+                    <span class="portfolio__image" style="background-image: url('./assets/images/singolo2/portfolio/11.jpg')"></span>
+                    <span class="portfolio__image" style="background-image: url('./assets/images/singolo2/portfolio/12.jpg')"></span> 
                 </div>
             </div>
         </section>
-        <section  class="about-us">
+        <section class="about-us">
             <a id="about" class="anchor"></a>
             <div class="wrapper about-us__wrapper">
                 <h2 class="about-us__title">About Us</h2>
@@ -263,7 +270,7 @@
                 </div>
             </div>
         </section>
-        <section  class="get-quote">
+        <section class="get-quote">
             <a id="contact" class="anchor"></a>
             <div class="wrapper get-quote__wrapper">
                 <h2 class="get-quote__title">Get a Quote</h2>
@@ -289,9 +296,9 @@
                                     <a href="#" class="close"></a>
                                     <h3 class="success">Письмо отправлено</h3>
                                     <p class="subject-true hidden">Тема: </p>
-                                    <p class="subject-false hidden">Без темы</p>
+                                    <p class="subject-false hidden">Нет темы</p>
                                     <p class="description-true hidden">Описание: </p>
-                                    <p class="description-false hidden">Без описания</p>
+                                    <p class="description-false hidden">Нет описания</p>
                                     <input type="button" value="OK">
                                 </div>
                             </div>
@@ -316,7 +323,7 @@
                             </li>
                             <li class="contacts__item">
                                 <span class="contacts__icon contacts__icon-mail"></span>
-                                <a href = "mailto: info@singolo.com" class="contacts__description">info@singolo.com</a>
+                                <a href="mailto: info@singolo.com" class="contacts__description">info@singolo.com</a>
                             </li>
                         </ul>
                     </div>
@@ -351,17 +358,17 @@
         <style>
             tspan {
                 white-space: pre;
-              }
-            
-              .shp0 {
+            }
+
+            .shp0 {
                 fill: #666d89;
-              }
-            
-              .shp1 {
+            }
+
+            .shp1 {
                 fill: none;
                 stroke: #666d89;
                 stroke-width: 2;
-              }
+            }
         </style>
         <defs>
 
